@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import { supabase } from '@/lib/supabase';
 import { Product, Category } from '@/lib/types';
 import Navbar from '@/components/Navbar';
