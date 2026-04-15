@@ -1,4 +1,4 @@
-import { cookies } from 'next/headers';
+import { cookies, headers } from 'next/headers';
 import { redirect } from 'next/navigation';
 import Link from 'next/link';
 import { LayoutDashboard, Package, Tag, ShoppingBag, LogOut } from 'lucide-react';
@@ -21,6 +21,14 @@ const navItems: NavItem[] = [
 ];
 
 export default async function AdminLayout({ children }: { children: React.ReactNode }) {
+  const headersList = await headers();
+  const pathname = headersList.get('x-pathname') || '';
+
+  // Login stránka nepotřebuje auth — vrať jen children bez sidebar layoutu
+  if (pathname.startsWith('/admin/login')) {
+    return <>{children}</>;
+  }
+
   const cookieStore = await cookies();
   const session = cookieStore.get('admin_session');
 

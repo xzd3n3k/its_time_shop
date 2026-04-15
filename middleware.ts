@@ -1,7 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-export function proxy(request: NextRequest) {
+export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
+
+  // Přidej pathname jako header (pro čtení v layoutu)
+  const response = NextResponse.next();
+  response.headers.set('x-pathname', pathname);
 
   if (pathname.startsWith('/admin') && !pathname.startsWith('/admin/login')) {
     const session = request.cookies.get('admin_session');
@@ -10,7 +14,7 @@ export function proxy(request: NextRequest) {
     }
   }
 
-  return NextResponse.next();
+  return response;
 }
 
 export const config = {
