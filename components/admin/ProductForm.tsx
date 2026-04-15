@@ -256,7 +256,7 @@ export default function ProductForm({ product, categories }: Props) {
           />
           <div
             className="relative w-10 h-5 rounded-full transition-colors"
-            style={{ background: form.active ? '#d4a853' : 'rgba(255,255,255,0.15)' }}
+            style={{ background: form.active ? '#008abf' : 'rgba(255,255,255,0.15)' }}
             onClick={() => setForm((prev) => ({ ...prev, active: !prev.active }))}
           >
             <span
@@ -272,7 +272,7 @@ export default function ProductForm({ product, categories }: Props) {
         <label className="flex items-center gap-3 cursor-pointer">
           <div
             className="relative w-10 h-5 rounded-full transition-colors"
-            style={{ background: form.featured ? '#d4a853' : 'rgba(255,255,255,0.15)' }}
+            style={{ background: form.featured ? '#008abf' : 'rgba(255,255,255,0.15)' }}
             onClick={() => setForm((prev) => ({ ...prev, featured: !prev.featured }))}
           >
             <span
@@ -297,7 +297,7 @@ export default function ProductForm({ product, categories }: Props) {
           type="submit"
           disabled={loading}
           className="flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-sm transition-all disabled:opacity-70"
-          style={{ background: 'linear-gradient(135deg, #d4a853, #b8922e)', color: '#080808' }}
+          style={{ background: 'linear-gradient(135deg, #008abf, #432273)', color: '#080808' }}
         >
           {loading ? <Loader2 size={16} className="animate-spin" /> : <Save size={16} />}
           {loading ? 'Ukládám...' : isEdit ? 'Aktualizovat produkt' : 'Vytvořit produkt'}

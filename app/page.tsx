@@ -53,15 +53,15 @@ export default async function HomePage() {
         <div
           className="absolute inset-0 opacity-5"
           style={{
-            backgroundImage: `radial-gradient(circle at 20% 50%, #d4a853 0%, transparent 50%),
-              radial-gradient(circle at 80% 20%, #d4a853 0%, transparent 40%)`,
+            backgroundImage: `radial-gradient(circle at 20% 50%, #008abf 0%, transparent 50%),
+              radial-gradient(circle at 80% 20%, #008abf 0%, transparent 40%)`,
           }}
         />
 
         <div className="relative z-10 text-center max-w-4xl mx-auto">
           <p
             className="text-sm uppercase tracking-[0.3em] mb-6"
-            style={{ color: '#d4a853' }}
+            style={{ color: '#008abf' }}
           >
             Prémiová autokosmetika
           </p>
@@ -69,13 +69,13 @@ export default async function HomePage() {
           <h1
             className="text-5xl md:text-7xl lg:text-8xl font-light mb-6 leading-tight"
             style={{
-              fontFamily: 'var(--font-cormorant)',
+              fontFamily: 'var(--font-heading)',
               color: '#ffffff',
             }}
           >
             Prémiová péče
             <br />
-            <span style={{ color: '#d4a853' }}>o váš automobil</span>
+            <span style={{ color: '#008abf' }}>o váš automobil</span>
           </h1>
 
           <div className="gold-line mx-auto mb-6" />
@@ -101,13 +101,13 @@ export default async function HomePage() {
             <div className="text-center mb-12">
               <p
                 className="text-sm uppercase tracking-[0.25em] mb-3"
-                style={{ color: '#d4a853' }}
+                style={{ color: '#008abf' }}
               >
                 Výběr pro vás
               </p>
               <h2
                 className="text-4xl md:text-5xl font-light mb-4"
-                style={{ fontFamily: 'var(--font-cormorant)', color: '#1a1a1a' }}
+                style={{ fontFamily: 'var(--font-heading)', color: '#1a1a1a' }}
               >
                 Doporučené produkty
               </h2>
@@ -135,13 +135,13 @@ export default async function HomePage() {
           <div className="text-center mb-12">
             <p
               className="text-sm uppercase tracking-[0.25em] mb-3"
-              style={{ color: '#d4a853' }}
+              style={{ color: '#008abf' }}
             >
               Naše hodnoty
             </p>
             <h2
               className="text-4xl md:text-5xl font-light mb-4"
-              style={{ fontFamily: 'var(--font-cormorant)', color: '#ffffff' }}
+              style={{ fontFamily: 'var(--font-heading)', color: '#ffffff' }}
             >
               Proč si vybrat nás?
             </h2>
@@ -156,15 +156,15 @@ export default async function HomePage() {
                   <div
                     className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-5"
                     style={{
-                      background: 'rgba(212,168,83,0.15)',
-                      border: '1px solid rgba(212,168,83,0.3)',
+                      background: 'rgba(0,138,191,0.15)',
+                      border: '1px solid rgba(0,138,191,0.3)',
                     }}
                   >
-                    <Icon size={24} style={{ color: '#d4a853' }} />
+                    <Icon size={24} style={{ color: '#008abf' }} />
                   </div>
                   <h3
                     className="text-xl font-semibold mb-3"
-                    style={{ fontFamily: 'var(--font-cormorant)', color: '#ffffff' }}
+                    style={{ fontFamily: 'var(--font-heading)', color: '#ffffff' }}
                   >
                     {feature.title}
                   </h3>

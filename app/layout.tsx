@@ -1,16 +1,18 @@
 import type { Metadata } from 'next';
-import { Cormorant_Garamond, Inter } from 'next/font/google';
+import { Outfit, DM_Sans } from 'next/font/google';
 import './globals.css';
 
-const cormorant = Cormorant_Garamond({
-  variable: '--font-cormorant',
+const outfit = Outfit({
+  variable: '--font-heading',
   subsets: ['latin'],
   weight: ['300', '400', '500', '600', '700'],
+  display: 'swap',
 });
 
-const inter = Inter({
-  variable: '--font-inter',
+const dmSans = DM_Sans({
+  variable: '--font-body',
   subsets: ['latin'],
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
@@ -32,8 +34,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="cs" className={`${cormorant.variable} ${inter.variable} h-full`}>
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="cs" className={`${outfit.variable} ${dmSans.variable} h-full`}>
+      <body className="min-h-full flex flex-col" style={{ fontFamily: 'var(--font-body)' }}>
+        {children}
+      </body>
     </html>
   );
 }

@@ -44,7 +44,7 @@ export default async function EditProduktPage({ params }: Props) {
         </Link>
         <h1
           className="text-3xl font-semibold"
-          style={{ fontFamily: 'var(--font-cormorant)', color: '#ffffff' }}
+          style={{ fontFamily: 'var(--font-heading)', color: '#ffffff' }}
         >
           Upravit produkt
         </h1>

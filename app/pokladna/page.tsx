@@ -89,12 +89,12 @@ export default function PokladnaPage() {
       <main className="flex-1 min-h-screen" style={{ background: '#faf8f4' }}>
         {/* Hlavička */}
         <div className="py-12 px-4 text-center" style={{ background: '#080808' }}>
-          <p className="text-sm uppercase tracking-[0.25em] mb-3" style={{ color: '#d4a853' }}>
+          <p className="text-sm uppercase tracking-[0.25em] mb-3" style={{ color: '#008abf' }}>
             Dokončení nákupu
           </p>
           <h1
             className="text-4xl md:text-5xl font-light"
-            style={{ fontFamily: 'var(--font-cormorant)', color: '#ffffff' }}
+            style={{ fontFamily: 'var(--font-heading)', color: '#ffffff' }}
           >
             Pokladna
           </h1>
@@ -226,8 +226,8 @@ export default function PokladnaPage() {
                     <label
                       className="flex items-center gap-4 p-4 rounded-lg border-2 cursor-pointer transition-all"
                       style={{
-                        borderColor: payment === 'cash' ? '#d4a853' : '#e5e7eb',
-                        background: payment === 'cash' ? 'rgba(212,168,83,0.05)' : '#ffffff',
+                        borderColor: payment === 'cash' ? '#008abf' : '#e5e7eb',
+                        background: payment === 'cash' ? 'rgba(0,138,191,0.05)' : '#ffffff',
                       }}
                     >
                       <input
@@ -238,7 +238,7 @@ export default function PokladnaPage() {
                         onChange={() => setPayment('cash')}
                         className="sr-only"
                       />
-                      <Banknote size={22} style={{ color: payment === 'cash' ? '#d4a853' : '#9ca3af' }} />
+                      <Banknote size={22} style={{ color: payment === 'cash' ? '#008abf' : '#9ca3af' }} />
                       <div>
                         <p className="font-medium text-gray-900">Hotově</p>
                         <p className="text-xs text-gray-500">Platba při převzetí</p>
@@ -246,7 +246,7 @@ export default function PokladnaPage() {
                       {payment === 'cash' && (
                         <div
                           className="ml-auto w-5 h-5 rounded-full flex items-center justify-center"
-                          style={{ background: '#d4a853' }}
+                          style={{ background: '#008abf' }}
                         >
                           <div className="w-2 h-2 rounded-full bg-white" />
                         </div>
@@ -257,8 +257,8 @@ export default function PokladnaPage() {
                     <label
                       className="flex items-center gap-4 p-4 rounded-lg border-2 cursor-pointer transition-all"
                       style={{
-                        borderColor: payment === 'bank_transfer' ? '#d4a853' : '#e5e7eb',
-                        background: payment === 'bank_transfer' ? 'rgba(212,168,83,0.05)' : '#ffffff',
+                        borderColor: payment === 'bank_transfer' ? '#008abf' : '#e5e7eb',
+                        background: payment === 'bank_transfer' ? 'rgba(0,138,191,0.05)' : '#ffffff',
                       }}
                     >
                       <input
@@ -269,7 +269,7 @@ export default function PokladnaPage() {
                         onChange={() => setPayment('bank_transfer')}
                         className="sr-only"
                       />
-                      <Wallet size={22} style={{ color: payment === 'bank_transfer' ? '#d4a853' : '#9ca3af' }} />
+                      <Wallet size={22} style={{ color: payment === 'bank_transfer' ? '#008abf' : '#9ca3af' }} />
                       <div>
                         <p className="font-medium text-gray-900">Bankovní převod</p>
                         <p className="text-xs text-gray-500">Platba převodem na účet</p>
@@ -277,7 +277,7 @@ export default function PokladnaPage() {
                       {payment === 'bank_transfer' && (
                         <div
                           className="ml-auto w-5 h-5 rounded-full flex items-center justify-center"
-                          style={{ background: '#d4a853' }}
+                          style={{ background: '#008abf' }}
                         >
                           <div className="w-2 h-2 rounded-full bg-white" />
                         </div>
@@ -326,7 +326,7 @@ export default function PokladnaPage() {
                     </div>
                     <div className="flex justify-between items-center">
                       <span className="font-semibold text-gray-900">Celkem:</span>
-                      <span className="text-2xl font-bold" style={{ color: '#d4a853' }}>
+                      <span className="text-2xl font-bold" style={{ color: '#008abf' }}>
                         {totalPrice().toFixed(2)} Kč
                       </span>
                     </div>

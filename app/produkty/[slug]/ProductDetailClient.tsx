@@ -32,7 +32,7 @@ export default function ProductDetailClient({ product }: Props) {
         {product.categories && (
           <>
             <span>/</span>
-            <span style={{ color: '#d4a853' }}>{product.categories.name}</span>
+            <span style={{ color: '#008abf' }}>{product.categories.name}</span>
           </>
         )}
       </div>
@@ -60,7 +60,7 @@ export default function ProductDetailClient({ product }: Props) {
           {product.featured && (
             <div
               className="absolute top-4 left-4 text-xs font-semibold px-3 py-1.5 rounded-full"
-              style={{ background: '#d4a853', color: '#080808' }}
+              style={{ background: '#008abf', color: '#080808' }}
             >
               Doporučujeme
             </div>
@@ -76,7 +76,7 @@ export default function ProductDetailClient({ product }: Props) {
           {product.categories && (
             <p
               className="text-sm uppercase tracking-widest mb-3 font-medium"
-              style={{ color: '#d4a853' }}
+              style={{ color: '#008abf' }}
             >
               {product.categories.name}
             </p>
@@ -84,7 +84,7 @@ export default function ProductDetailClient({ product }: Props) {
 
           <h1
             className="text-3xl md:text-4xl font-semibold mb-4 leading-tight"
-            style={{ fontFamily: 'var(--font-cormorant)', color: '#1a1a1a' }}
+            style={{ fontFamily: 'var(--font-heading)', color: '#1a1a1a' }}
           >
             {product.name}
           </h1>
@@ -93,7 +93,7 @@ export default function ProductDetailClient({ product }: Props) {
 
           <p
             className="text-4xl font-bold mb-6"
-            style={{ color: '#d4a853' }}
+            style={{ color: '#008abf' }}
           >
             {product.price.toFixed(2)} Kč
           </p>
@@ -136,7 +136,7 @@ export default function ProductDetailClient({ product }: Props) {
               background: added
                 ? '#22c55e'
                 : product.stock > 0
-                ? 'linear-gradient(135deg, #d4a853, #b8922e)'
+                ? 'linear-gradient(135deg, #008abf, #432273)'
                 : '#e5e7eb',
               color: product.stock > 0 || added ? '#080808' : '#9ca3af',
             }}
@@ -158,7 +158,7 @@ export default function ProductDetailClient({ product }: Props) {
             <Link
               href="/kosik"
               className="mt-3 text-center text-sm font-medium transition-colors hover:underline"
-              style={{ color: '#d4a853' }}
+              style={{ color: '#008abf' }}
             >
               Přejít do košíku
             </Link>

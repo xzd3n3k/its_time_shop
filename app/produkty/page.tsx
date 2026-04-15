@@ -42,13 +42,13 @@ export default async function ProduktyPage() {
         >
           <p
             className="text-sm uppercase tracking-[0.25em] mb-3"
-            style={{ color: '#d4a853' }}
+            style={{ color: '#008abf' }}
           >
             Náš sortiment
           </p>
           <h1
             className="text-4xl md:text-5xl font-light"
-            style={{ fontFamily: 'var(--font-cormorant)', color: '#ffffff' }}
+            style={{ fontFamily: 'var(--font-heading)', color: '#ffffff' }}
           >
             Produkty
           </h1>

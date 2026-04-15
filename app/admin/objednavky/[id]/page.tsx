@@ -50,7 +50,7 @@ export default async function ObjednavkaDetailPage({ params }: Props) {
           <div>
             <h1
               className="text-3xl font-semibold"
-              style={{ fontFamily: 'var(--font-cormorant)', color: '#ffffff' }}
+              style={{ fontFamily: 'var(--font-heading)', color: '#ffffff' }}
             >
               Objednávka {order.order_number}
             </h1>
@@ -77,7 +77,7 @@ export default async function ObjednavkaDetailPage({ params }: Props) {
           style={{ background: '#1a1a1a', border: '1px solid rgba(255,255,255,0.06)' }}
         >
           <div className="flex items-center gap-2 mb-4">
-            <User size={16} style={{ color: '#d4a853' }} />
+            <User size={16} style={{ color: '#008abf' }} />
             <h2 className="font-semibold text-sm" style={{ color: '#ffffff' }}>
               Zákazník
             </h2>
@@ -97,7 +97,7 @@ export default async function ObjednavkaDetailPage({ params }: Props) {
           style={{ background: '#1a1a1a', border: '1px solid rgba(255,255,255,0.06)' }}
         >
           <div className="flex items-center gap-2 mb-4">
-            <MapPin size={16} style={{ color: '#d4a853' }} />
+            <MapPin size={16} style={{ color: '#008abf' }} />
             <h2 className="font-semibold text-sm" style={{ color: '#ffffff' }}>
               Doručovací adresa
             </h2>
@@ -115,7 +115,7 @@ export default async function ObjednavkaDetailPage({ params }: Props) {
           style={{ background: '#1a1a1a', border: '1px solid rgba(255,255,255,0.06)' }}
         >
           <div className="flex items-center gap-2 mb-4">
-            <CreditCard size={16} style={{ color: '#d4a853' }} />
+            <CreditCard size={16} style={{ color: '#008abf' }} />
             <h2 className="font-semibold text-sm" style={{ color: '#ffffff' }}>
               Platba
             </h2>
@@ -144,7 +144,7 @@ export default async function ObjednavkaDetailPage({ params }: Props) {
           style={{ background: '#1a1a1a', border: '1px solid rgba(255,255,255,0.06)' }}
         >
           <div className="flex items-center gap-2 mb-4">
-            <Package size={16} style={{ color: '#d4a853' }} />
+            <Package size={16} style={{ color: '#008abf' }} />
             <h2 className="font-semibold text-sm" style={{ color: '#ffffff' }}>
               Položky objednávky
             </h2>
@@ -165,7 +165,7 @@ export default async function ObjednavkaDetailPage({ params }: Props) {
                     {Number(item.product?.price ?? 0).toFixed(2)} Kč × {item.quantity} ks
                   </p>
                 </div>
-                <p className="text-sm font-semibold" style={{ color: '#d4a853' }}>
+                <p className="text-sm font-semibold" style={{ color: '#008abf' }}>
                   {(Number(item.product?.price ?? 0) * item.quantity).toFixed(2)} Kč
                 </p>
               </div>
@@ -179,7 +179,7 @@ export default async function ObjednavkaDetailPage({ params }: Props) {
             <span className="font-semibold" style={{ color: '#ffffff' }}>
               Celkem:
             </span>
-            <span className="text-xl font-bold" style={{ color: '#d4a853' }}>
+            <span className="text-xl font-bold" style={{ color: '#008abf' }}>
               {Number(order.total).toFixed(2)} Kč
             </span>
           </div>

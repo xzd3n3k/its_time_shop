@@ -30,7 +30,7 @@ export default async function NovyProduktPage() {
         </Link>
         <h1
           className="text-3xl font-semibold"
-          style={{ fontFamily: 'var(--font-cormorant)', color: '#ffffff' }}
+          style={{ fontFamily: 'var(--font-heading)', color: '#ffffff' }}
         >
           Nový produkt
         </h1>

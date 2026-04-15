@@ -15,7 +15,7 @@ export default function Navbar() {
     <>
       <nav
         className="sticky top-0 z-30 w-full"
-        style={{ background: '#080808', borderBottom: '1px solid rgba(212,168,83,0.2)' }}
+        style={{ background: '#080808', borderBottom: '1px solid rgba(0,138,191,0.2)' }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
@@ -24,8 +24,8 @@ export default function Navbar() {
               href="/"
               className="text-2xl font-bold tracking-wide"
               style={{
-                fontFamily: 'var(--font-cormorant)',
-                color: '#d4a853',
+                fontFamily: 'var(--font-heading)',
+                color: '#008abf',
                 letterSpacing: '0.15em',
               }}
             >
@@ -56,14 +56,14 @@ export default function Navbar() {
               <button
                 onClick={() => setDrawerOpen(true)}
                 className="relative p-2 rounded-full transition-colors hover:bg-white/10"
-                style={{ color: '#d4a853' }}
+                style={{ color: '#008abf' }}
                 aria-label="Otevřít košík"
               >
                 <ShoppingCart size={22} />
                 {totalItems > 0 && (
                   <span
                     className="absolute -top-1 -right-1 text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center"
-                    style={{ background: '#d4a853', color: '#080808' }}
+                    style={{ background: '#008abf', color: '#080808' }}
                   >
                     {totalItems > 9 ? '9+' : totalItems}
                   </span>
@@ -74,7 +74,7 @@ export default function Navbar() {
               <button
                 onClick={() => setMobileOpen(!mobileOpen)}
                 className="md:hidden p-2 rounded-full transition-colors hover:bg-white/10"
-                style={{ color: '#d4a853' }}
+                style={{ color: '#008abf' }}
                 aria-label="Menu"
               >
                 {mobileOpen ? <X size={22} /> : <Menu size={22} />}
@@ -87,7 +87,7 @@ export default function Navbar() {
         {mobileOpen && (
           <div
             className="md:hidden border-t"
-            style={{ background: '#0e0e0e', borderColor: 'rgba(212,168,83,0.2)' }}
+            style={{ background: '#0e0e0e', borderColor: 'rgba(0,138,191,0.2)' }}
           >
             <div className="px-4 py-4 space-y-3">
               <Link

@@ -56,7 +56,7 @@ export default async function AdminObjednavkyPage({ searchParams }: Props) {
       <div className="mb-8">
         <h1
           className="text-3xl font-semibold"
-          style={{ fontFamily: 'var(--font-cormorant)', color: '#ffffff' }}
+          style={{ fontFamily: 'var(--font-heading)', color: '#ffffff' }}
         >
           Objednávky
         </h1>
@@ -74,7 +74,7 @@ export default async function AdminObjednavkyPage({ searchParams }: Props) {
             className="px-3 py-1.5 rounded-full text-xs font-medium transition-all"
             style={
               status === s || (!status && !s)
-                ? { background: '#d4a853', color: '#080808' }
+                ? { background: '#008abf', color: '#080808' }
                 : { background: '#1a1a1a', color: 'rgba(255,255,255,0.5)', border: '1px solid rgba(255,255,255,0.08)' }
             }
           >
@@ -115,7 +115,7 @@ export default async function AdminObjednavkyPage({ searchParams }: Props) {
                     className="transition-colors hover:bg-white/5"
                     style={{ borderBottom: '1px solid rgba(255,255,255,0.04)' }}
                   >
-                    <td className="px-6 py-4 text-sm font-medium" style={{ color: '#d4a853' }}>
+                    <td className="px-6 py-4 text-sm font-medium" style={{ color: '#008abf' }}>
                       {order.order_number ?? '—'}
                     </td>
                     <td className="px-6 py-4">
@@ -126,7 +126,7 @@ export default async function AdminObjednavkyPage({ searchParams }: Props) {
                         {order.customer_email}
                       </p>
                     </td>
-                    <td className="px-6 py-4 text-sm font-semibold" style={{ color: '#d4a853' }}>
+                    <td className="px-6 py-4 text-sm font-semibold" style={{ color: '#008abf' }}>
                       {Number(order.total).toFixed(2)} Kč
                     </td>
                     <td className="px-6 py-4 text-sm" style={{ color: 'rgba(255,255,255,0.6)' }}>
@@ -156,7 +156,7 @@ export default async function AdminObjednavkyPage({ searchParams }: Props) {
                       <Link
                         href={`/admin/objednavky/${order.id}`}
                         className="text-xs font-medium px-3 py-1.5 rounded-lg transition-all"
-                        style={{ background: 'rgba(212,168,83,0.1)', color: '#d4a853' }}
+                        style={{ background: 'rgba(0,138,191,0.1)', color: '#008abf' }}
                       >
                         Detail
                       </Link>

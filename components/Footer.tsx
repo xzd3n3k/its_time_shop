@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer
       className="mt-auto py-10 px-4"
-      style={{ background: '#080808', borderTop: '1px solid rgba(212,168,83,0.2)' }}
+      style={{ background: '#080808', borderTop: '1px solid rgba(0,138,191,0.2)' }}
     >
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
@@ -13,7 +13,7 @@ export default function Footer() {
           <div className="text-center md:text-left">
             <p
               className="text-2xl font-bold tracking-widest"
-              style={{ fontFamily: 'var(--font-cormorant)', color: '#d4a853' }}
+              style={{ fontFamily: 'var(--font-heading)', color: '#008abf' }}
             >
               It&apos;s Time
             </p>
@@ -37,7 +37,7 @@ export default function Footer() {
 
           {/* Kontakt */}
           <div className="flex items-center gap-2 text-sm" style={{ color: 'rgba(255,255,255,0.6)' }}>
-            <Mail size={14} style={{ color: '#d4a853' }} />
+            <Mail size={14} style={{ color: '#008abf' }} />
             <a
               href="mailto:xhypextream@gmail.com"
               className="hover:text-yellow-400 transition-colors"
@@ -49,7 +49,7 @@ export default function Footer() {
 
         <div
           className="mt-8 pt-6 text-center text-xs"
-          style={{ borderTop: '1px solid rgba(212,168,83,0.1)', color: 'rgba(255,255,255,0.3)' }}
+          style={{ borderTop: '1px solid rgba(0,138,191,0.1)', color: 'rgba(255,255,255,0.3)' }}
         >
           &copy; {new Date().getFullYear()} It&apos;s Time. Všechna práva vyhrazena.
         </div>

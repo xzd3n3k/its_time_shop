@@ -15,12 +15,12 @@ export default function KosikPage() {
       <main className="flex-1 min-h-screen" style={{ background: '#faf8f4' }}>
         {/* Hlavička */}
         <div className="py-12 px-4 text-center" style={{ background: '#080808' }}>
-          <p className="text-sm uppercase tracking-[0.25em] mb-3" style={{ color: '#d4a853' }}>
+          <p className="text-sm uppercase tracking-[0.25em] mb-3" style={{ color: '#008abf' }}>
             Váš výběr
           </p>
           <h1
             className="text-4xl md:text-5xl font-light"
-            style={{ fontFamily: 'var(--font-cormorant)', color: '#ffffff' }}
+            style={{ fontFamily: 'var(--font-heading)', color: '#ffffff' }}
           >
             Košík
           </h1>
@@ -111,7 +111,7 @@ export default function KosikPage() {
                         </div>
 
                         {/* Cena */}
-                        <p className="font-bold text-lg" style={{ color: '#d4a853' }}>
+                        <p className="font-bold text-lg" style={{ color: '#008abf' }}>
                           {(item.product.price * item.quantity).toFixed(2)} Kč
                         </p>
                       </div>
@@ -144,7 +144,7 @@ export default function KosikPage() {
                   <div className="border-t border-gray-100 pt-4 mb-6">
                     <div className="flex justify-between items-center">
                       <span className="font-semibold text-gray-900">Celkem:</span>
-                      <span className="text-2xl font-bold" style={{ color: '#d4a853' }}>
+                      <span className="text-2xl font-bold" style={{ color: '#008abf' }}>
                         {totalPrice().toFixed(2)} Kč
                       </span>
                     </div>

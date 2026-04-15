@@ -41,17 +41,17 @@ export default async function AdminLayout({ children }: { children: React.ReactN
       {/* Sidebar */}
       <aside
         className="w-64 flex-shrink-0 flex flex-col"
-        style={{ background: '#0e0e0e', borderRight: '1px solid rgba(212,168,83,0.15)' }}
+        style={{ background: '#0e0e0e', borderRight: '1px solid rgba(0,138,191,0.15)' }}
       >
         {/* Logo */}
         <div
           className="px-6 py-5 border-b"
-          style={{ borderColor: 'rgba(212,168,83,0.15)' }}
+          style={{ borderColor: 'rgba(0,138,191,0.15)' }}
         >
           <Link href="/admin">
             <h1
               className="text-2xl font-bold tracking-widest"
-              style={{ fontFamily: 'var(--font-cormorant)', color: '#d4a853' }}
+              style={{ fontFamily: 'var(--font-heading)', color: '#008abf' }}
             >
               It&apos;s Time
             </h1>
@@ -72,7 +72,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
             >
               <Icon
                 size={18}
-                style={{ color: 'rgba(212,168,83,0.7)' }}
+                style={{ color: 'rgba(0,138,191,0.7)' }}
               />
               {label}
             </Link>
@@ -82,7 +82,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
         {/* Logout */}
         <div
           className="px-3 py-4 border-t"
-          style={{ borderColor: 'rgba(212,168,83,0.15)' }}
+          style={{ borderColor: 'rgba(0,138,191,0.15)' }}
         >
           <form action="/api/admin/logout" method="POST">
             <button

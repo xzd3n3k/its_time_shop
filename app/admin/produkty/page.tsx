@@ -36,7 +36,7 @@ export default async function AdminProduktyPage({ searchParams }: Props) {
         <div>
           <h1
             className="text-3xl font-semibold"
-            style={{ fontFamily: 'var(--font-cormorant)', color: '#ffffff' }}
+            style={{ fontFamily: 'var(--font-heading)', color: '#ffffff' }}
           >
             Produkty
           </h1>
@@ -47,7 +47,7 @@ export default async function AdminProduktyPage({ searchParams }: Props) {
         <Link
           href="/admin/produkty/novy"
           className="flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-semibold"
-          style={{ background: 'linear-gradient(135deg, #d4a853, #b8922e)', color: '#080808' }}
+          style={{ background: 'linear-gradient(135deg, #008abf, #432273)', color: '#080808' }}
         >
           <Plus size={16} />
           Přidat produkt
@@ -66,7 +66,7 @@ export default async function AdminProduktyPage({ searchParams }: Props) {
               className="w-9 h-9 flex items-center justify-center rounded-lg text-sm font-medium transition-all"
               style={
                 p === page
-                  ? { background: '#d4a853', color: '#080808' }
+                  ? { background: '#008abf', color: '#080808' }
                   : { background: '#1a1a1a', color: 'rgba(255,255,255,0.6)', border: '1px solid rgba(255,255,255,0.08)' }
               }
             >

@@ -60,7 +60,7 @@ export default function ProductsClient({ products, categories }: ProductsClientP
             className="px-4 py-2 rounded-full text-sm font-medium transition-all"
             style={
               !selectedCategory
-                ? { background: '#d4a853', color: '#080808' }
+                ? { background: '#008abf', color: '#080808' }
                 : { background: '#ffffff', color: '#6b7280', border: '1px solid #e5e7eb' }
             }
           >
@@ -73,7 +73,7 @@ export default function ProductsClient({ products, categories }: ProductsClientP
               className="px-4 py-2 rounded-full text-sm font-medium transition-all"
               style={
                 selectedCategory === cat.id
-                  ? { background: '#d4a853', color: '#080808' }
+                  ? { background: '#008abf', color: '#080808' }
                   : { background: '#ffffff', color: '#6b7280', border: '1px solid #e5e7eb' }
               }
             >

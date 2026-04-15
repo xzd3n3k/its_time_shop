@@ -48,7 +48,7 @@ export default function ProductCard({ product }: ProductCardProps) {
           {product.featured && product.stock > 0 && (
             <div
               className="absolute top-3 left-3 text-xs font-semibold px-2 py-1 rounded-full"
-              style={{ background: '#d4a853', color: '#080808' }}
+              style={{ background: '#008abf', color: '#080808' }}
             >
               Doporučujeme
             </div>
@@ -58,13 +58,13 @@ export default function ProductCard({ product }: ProductCardProps) {
         {/* Info */}
         <div className="p-4">
           {product.categories && (
-            <p className="text-xs font-medium uppercase tracking-wider mb-1" style={{ color: '#b8922e' }}>
+            <p className="text-xs font-medium uppercase tracking-wider mb-1" style={{ color: '#0077a6' }}>
               {product.categories.name}
             </p>
           )}
           <h3 className="font-semibold text-gray-900 mb-2 line-clamp-2 leading-tight">{product.name}</h3>
           <div className="flex items-center justify-between">
-            <p className="text-lg font-bold" style={{ color: '#d4a853' }}>
+            <p className="text-lg font-bold" style={{ color: '#008abf' }}>
               {product.price.toFixed(2)} Kč
             </p>
             <p className="text-xs text-gray-400">
@@ -81,7 +81,7 @@ export default function ProductCard({ product }: ProductCardProps) {
           disabled={product.stock === 0}
           className="w-full flex items-center justify-center gap-2 py-2.5 rounded-lg text-sm font-semibold transition-all disabled:opacity-50 disabled:cursor-not-allowed"
           style={{
-            background: product.stock > 0 ? 'linear-gradient(135deg, #d4a853, #b8922e)' : '#e5e7eb',
+            background: product.stock > 0 ? 'linear-gradient(135deg, #008abf, #432273)' : '#e5e7eb',
             color: product.stock > 0 ? '#080808' : '#9ca3af',
           }}
         >
