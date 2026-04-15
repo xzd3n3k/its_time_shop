@@ -72,7 +72,7 @@ export default function PokladnaPage() {
         <Navbar />
         <main className="flex-1 min-h-screen flex items-center justify-center" style={{ background: '#faf8f4' }}>
           <div className="text-center">
-            <p className="text-gray-500 mb-4">Váš košík je prázdný</p>
+            <p className="text-gray-700 mb-4">Váš košík je prázdný</p>
             <Link href="/produkty" className="btn-gold rounded-lg">
               Přejít na produkty
             </Link>
@@ -120,7 +120,7 @@ export default function PokladnaPage() {
                         required
                         value={form.customer_name}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-yellow-400 focus:ring-2 focus:ring-yellow-100 text-sm"
+                        className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-[#008abf] focus:ring-2 focus:ring-blue-50 text-sm"
                         placeholder="Jan Novák"
                       />
                     </div>
@@ -134,7 +134,7 @@ export default function PokladnaPage() {
                         required
                         value={form.customer_email}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-yellow-400 focus:ring-2 focus:ring-yellow-100 text-sm"
+                        className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-[#008abf] focus:ring-2 focus:ring-blue-50 text-sm"
                         placeholder="jan@example.com"
                       />
                     </div>
@@ -147,7 +147,7 @@ export default function PokladnaPage() {
                         name="customer_phone"
                         value={form.customer_phone}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-yellow-400 focus:ring-2 focus:ring-yellow-100 text-sm"
+                        className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-[#008abf] focus:ring-2 focus:ring-blue-50 text-sm"
                         placeholder="+420 777 000 000"
                       />
                     </div>
@@ -168,7 +168,7 @@ export default function PokladnaPage() {
                         required
                         value={form.customer_street}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-yellow-400 focus:ring-2 focus:ring-yellow-100 text-sm"
+                        className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-[#008abf] focus:ring-2 focus:ring-blue-50 text-sm"
                         placeholder="Hlavní 123"
                       />
                     </div>
@@ -183,7 +183,7 @@ export default function PokladnaPage() {
                           required
                           value={form.customer_city}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-yellow-400 focus:ring-2 focus:ring-yellow-100 text-sm"
+                          className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-[#008abf] focus:ring-2 focus:ring-blue-50 text-sm"
                           placeholder="Praha"
                         />
                       </div>
@@ -197,7 +197,7 @@ export default function PokladnaPage() {
                           required
                           value={form.customer_zip}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-yellow-400 focus:ring-2 focus:ring-yellow-100 text-sm"
+                          className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-[#008abf] focus:ring-2 focus:ring-blue-50 text-sm"
                           placeholder="110 00"
                         />
                       </div>
@@ -211,7 +211,7 @@ export default function PokladnaPage() {
                         value={form.notes}
                         onChange={handleChange}
                         rows={3}
-                        className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-yellow-400 focus:ring-2 focus:ring-yellow-100 text-sm resize-none"
+                        className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-[#008abf] focus:ring-2 focus:ring-blue-50 text-sm resize-none"
                         placeholder="Případné poznámky k doručení..."
                       />
                     </div>
@@ -241,7 +241,7 @@ export default function PokladnaPage() {
                       <Banknote size={22} style={{ color: payment === 'cash' ? '#008abf' : '#9ca3af' }} />
                       <div>
                         <p className="font-medium text-gray-900">Hotově</p>
-                        <p className="text-xs text-gray-500">Platba při převzetí</p>
+                        <p className="text-xs text-gray-600">Platba při převzetí</p>
                       </div>
                       {payment === 'cash' && (
                         <div
@@ -272,7 +272,7 @@ export default function PokladnaPage() {
                       <Wallet size={22} style={{ color: payment === 'bank_transfer' ? '#008abf' : '#9ca3af' }} />
                       <div>
                         <p className="font-medium text-gray-900">Bankovní převod</p>
-                        <p className="text-xs text-gray-500">Platba převodem na účet</p>
+                        <p className="text-xs text-gray-600">Platba převodem na účet</p>
                       </div>
                       {payment === 'bank_transfer' && (
                         <div
@@ -288,7 +288,7 @@ export default function PokladnaPage() {
                     <div
                       className="flex items-center gap-4 p-4 rounded-lg border-2 border-gray-100 opacity-50 cursor-not-allowed"
                     >
-                      <CreditCard size={22} className="text-gray-300" />
+                      <CreditCard size={22} className="text-gray-500" />
                       <div>
                         <p className="font-medium text-gray-400">Platební karta</p>
                         <p className="text-xs text-gray-400">Připravujeme</p>
@@ -309,7 +309,7 @@ export default function PokladnaPage() {
                   <div className="space-y-3 mb-4 max-h-60 overflow-y-auto">
                     {items.map((item) => (
                       <div key={item.product.id} className="flex justify-between text-sm">
-                        <span className="text-gray-600 truncate max-w-32">
+                        <span className="text-gray-700 truncate max-w-32">
                           {item.product.name} ×{item.quantity}
                         </span>
                         <span className="font-medium ml-2 flex-shrink-0">
@@ -321,7 +321,7 @@ export default function PokladnaPage() {
 
                   <div className="border-t border-gray-100 pt-4 mb-6">
                     <div className="flex justify-between items-center mb-1">
-                      <span className="text-sm text-gray-600">Doprava:</span>
+                      <span className="text-sm text-gray-700">Doprava:</span>
                       <span className="text-sm font-medium text-gray-900">dle dohody</span>
                     </div>
                     <div className="flex justify-between items-center">
@@ -354,7 +354,7 @@ export default function PokladnaPage() {
                     )}
                   </button>
 
-                  <p className="text-xs text-gray-400 text-center mt-3">
+                  <p className="text-xs text-gray-600 text-center mt-3">
                     Odesláním souhlasíte s podmínkami prodeje
                   </p>
                 </div>

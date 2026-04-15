@@ -31,8 +31,8 @@ export default function KosikPage() {
           {items.length === 0 ? (
             <div className="text-center py-20">
               <ShoppingBag size={64} strokeWidth={1} className="mx-auto mb-6 text-gray-300" />
-              <h2 className="text-2xl font-light text-gray-500 mb-4">Váš košík je prázdný</h2>
-              <p className="text-gray-400 mb-8">Přidejte produkty z našeho sortimentu</p>
+              <h2 className="text-2xl font-light text-gray-700 mb-4">Váš košík je prázdný</h2>
+              <p className="text-gray-600 mb-8">Přidejte produkty z našeho sortimentu</p>
               <Link href="/produkty" className="btn-gold rounded-lg">
                 Přejít na produkty
               </Link>
@@ -76,14 +76,14 @@ export default function KosikPage() {
                             {item.product.name}
                           </Link>
                           {item.product.categories && (
-                            <p className="text-xs text-gray-400 mt-0.5">
+                            <p className="text-xs text-gray-600 mt-0.5">
                               {item.product.categories.name}
                             </p>
                           )}
                         </div>
                         <button
                           onClick={() => remove(item.product.id)}
-                          className="text-gray-400 hover:text-red-500 transition-colors p-1 flex-shrink-0"
+                          className="text-gray-600 hover:text-red-500 transition-colors p-1 flex-shrink-0"
                         >
                           <Trash2 size={16} />
                         </button>
@@ -94,7 +94,7 @@ export default function KosikPage() {
                         <div className="flex items-center gap-2">
                           <button
                             onClick={() => updateQuantity(item.product.id, item.quantity - 1)}
-                            className="w-7 h-7 rounded-full border border-gray-200 flex items-center justify-center hover:border-yellow-400 transition-colors"
+                            className="w-7 h-7 rounded-full border border-gray-300 text-gray-700 flex items-center justify-center hover:border-[#008abf] hover:text-[#008abf] transition-colors"
                           >
                             <Minus size={12} />
                           </button>
@@ -103,7 +103,7 @@ export default function KosikPage() {
                           </span>
                           <button
                             onClick={() => updateQuantity(item.product.id, item.quantity + 1)}
-                            className="w-7 h-7 rounded-full border border-gray-200 flex items-center justify-center hover:border-yellow-400 transition-colors"
+                            className="w-7 h-7 rounded-full border border-gray-300 text-gray-700 flex items-center justify-center hover:border-[#008abf] hover:text-[#008abf] transition-colors"
                             disabled={item.quantity >= item.product.stock}
                           >
                             <Plus size={12} />
@@ -115,7 +115,7 @@ export default function KosikPage() {
                           {(item.product.price * item.quantity).toFixed(2)} Kč
                         </p>
                       </div>
-                      <p className="text-xs text-gray-400 mt-1">
+                      <p className="text-xs text-gray-600 mt-1">
                         {item.product.price.toFixed(2)} Kč / ks
                       </p>
                     </div>
@@ -148,7 +148,7 @@ export default function KosikPage() {
                         {totalPrice().toFixed(2)} Kč
                       </span>
                     </div>
-                    <p className="text-xs text-gray-400 mt-1">vč. DPH</p>
+                    <p className="text-xs text-gray-600 mt-1">vč. DPH</p>
                   </div>
 
                   <Link
@@ -161,7 +161,7 @@ export default function KosikPage() {
 
                   <Link
                     href="/produkty"
-                    className="block text-center mt-3 text-sm text-gray-500 hover:text-yellow-600 transition-colors"
+                    className="block text-center mt-3 text-sm text-gray-700 hover:text-[#008abf] transition-colors"
                   >
                     Pokračovat v nákupu
                   </Link>
