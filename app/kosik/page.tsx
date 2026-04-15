@@ -94,16 +94,16 @@ export default function KosikPage() {
                         <div className="flex items-center gap-2">
                           <button
                             onClick={() => updateQuantity(item.product.id, item.quantity - 1)}
-                            className="w-7 h-7 rounded-full border border-gray-300 text-gray-700 flex items-center justify-center hover:border-[#008abf] hover:text-[#008abf] transition-colors"
+                            className="w-7 h-7 rounded-full border-2 border-gray-400 text-gray-800 flex items-center justify-center hover:border-[#008abf] hover:text-[#008abf] transition-colors"
                           >
                             <Minus size={12} />
                           </button>
-                          <span className="w-8 text-center font-semibold text-sm">
+                          <span className="w-8 text-center font-bold text-sm text-gray-900">
                             {item.quantity}
                           </span>
                           <button
                             onClick={() => updateQuantity(item.product.id, item.quantity + 1)}
-                            className="w-7 h-7 rounded-full border border-gray-300 text-gray-700 flex items-center justify-center hover:border-[#008abf] hover:text-[#008abf] transition-colors"
+                            className="w-7 h-7 rounded-full border-2 border-gray-400 text-gray-800 flex items-center justify-center hover:border-[#008abf] hover:text-[#008abf] transition-colors"
                             disabled={item.quantity >= item.product.stock}
                           >
                             <Plus size={12} />
@@ -143,7 +143,7 @@ export default function KosikPage() {
 
                   <div className="border-t border-gray-100 pt-4 mb-6">
                     <div className="flex justify-between items-center">
-                      <span className="font-semibold text-gray-900">Celkem:</span>
+                      <span className="font-bold text-gray-900 text-base">Celkem:</span>
                       <span className="text-2xl font-bold" style={{ color: '#008abf' }}>
                         {totalPrice().toFixed(2)} Kč
                       </span>

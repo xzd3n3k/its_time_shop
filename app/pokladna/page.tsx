@@ -312,7 +312,7 @@ export default function PokladnaPage() {
                         <span className="text-gray-700 truncate max-w-32">
                           {item.product.name} ×{item.quantity}
                         </span>
-                        <span className="font-medium ml-2 flex-shrink-0">
+                        <span className="font-semibold ml-2 flex-shrink-0 text-gray-900">
                           {(item.product.price * item.quantity).toFixed(2)} Kč
                         </span>
                       </div>
