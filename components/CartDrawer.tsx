@@ -105,14 +105,14 @@ export default function CartDrawer({ open, onClose }: CartDrawerProps) {
                       <div className="flex items-center gap-2 mt-2">
                         <button
                           onClick={() => updateQuantity(item.product.id, item.quantity - 1)}
-                          className="w-6 h-6 rounded-full border border-gray-300 flex items-center justify-center hover:border-yellow-500 transition-colors"
+                          className="w-6 h-6 rounded-full border-2 border-gray-400 text-gray-800 flex items-center justify-center hover:border-[#008abf] hover:text-[#008abf] transition-colors"
                         >
                           <Minus size={12} />
                         </button>
-                        <span className="text-sm font-medium w-6 text-center">{item.quantity}</span>
+                        <span className="text-sm font-bold w-6 text-center text-gray-900">{item.quantity}</span>
                         <button
                           onClick={() => updateQuantity(item.product.id, item.quantity + 1)}
-                          className="w-6 h-6 rounded-full border border-gray-300 flex items-center justify-center hover:border-yellow-500 transition-colors"
+                          className="w-6 h-6 rounded-full border-2 border-gray-400 text-gray-800 flex items-center justify-center hover:border-[#008abf] hover:text-[#008abf] transition-colors"
                         >
                           <Plus size={12} />
                         </button>
@@ -134,7 +134,7 @@ export default function CartDrawer({ open, onClose }: CartDrawerProps) {
             {/* Footer */}
             {items.length > 0 && (
               <div className="p-5 border-t border-gray-100 space-y-3">
-                <div className="flex justify-between text-base font-semibold">
+                <div className="flex justify-between text-base font-bold text-gray-900">
                   <span>Celkem:</span>
                   <span style={{ color: '#008abf' }}>{totalPrice().toFixed(2)} Kč</span>
                 </div>
