@@ -12,10 +12,10 @@ export default function KosikPage() {
   return (
     <>
       <Navbar />
-      <main className="flex-1 min-h-screen" style={{ background: '#faf8f4' }}>
+      <main className="flex-1 min-h-screen" style={{ background: '#fff5f9' }}>
         {/* Hlavička */}
         <div className="py-12 px-4 text-center" style={{ background: '#080808' }}>
-          <p className="text-sm uppercase tracking-[0.25em] mb-3" style={{ color: '#008abf' }}>
+          <p className="text-sm uppercase tracking-[0.25em] mb-3" style={{ color: '#e91e8c' }}>
             Váš výběr
           </p>
           <h1
@@ -94,7 +94,7 @@ export default function KosikPage() {
                         <div className="flex items-center gap-2">
                           <button
                             onClick={() => updateQuantity(item.product.id, item.quantity - 1)}
-                            className="w-7 h-7 rounded-full border-2 border-gray-400 text-gray-800 flex items-center justify-center hover:border-[#008abf] hover:text-[#008abf] transition-colors"
+                            className="w-7 h-7 rounded-full border-2 border-gray-400 text-gray-800 flex items-center justify-center hover:border-[#e91e8c] hover:text-[#e91e8c] transition-colors"
                           >
                             <Minus size={12} />
                           </button>
@@ -103,7 +103,7 @@ export default function KosikPage() {
                           </span>
                           <button
                             onClick={() => updateQuantity(item.product.id, item.quantity + 1)}
-                            className="w-7 h-7 rounded-full border-2 border-gray-400 text-gray-800 flex items-center justify-center hover:border-[#008abf] hover:text-[#008abf] transition-colors"
+                            className="w-7 h-7 rounded-full border-2 border-gray-400 text-gray-800 flex items-center justify-center hover:border-[#e91e8c] hover:text-[#e91e8c] transition-colors"
                             disabled={item.quantity >= item.product.stock}
                           >
                             <Plus size={12} />
@@ -111,7 +111,7 @@ export default function KosikPage() {
                         </div>
 
                         {/* Cena */}
-                        <p className="font-bold text-lg" style={{ color: '#008abf' }}>
+                        <p className="font-bold text-lg" style={{ color: '#e91e8c' }}>
                           {(item.product.price * item.quantity).toFixed(2)} Kč
                         </p>
                       </div>
@@ -144,7 +144,7 @@ export default function KosikPage() {
                   <div className="border-t border-gray-100 pt-4 mb-6">
                     <div className="flex justify-between items-center">
                       <span className="font-bold text-gray-900 text-base">Celkem:</span>
-                      <span className="text-2xl font-bold" style={{ color: '#008abf' }}>
+                      <span className="text-2xl font-bold" style={{ color: '#e91e8c' }}>
                         {totalPrice().toFixed(2)} Kč
                       </span>
                     </div>
@@ -161,7 +161,7 @@ export default function KosikPage() {
 
                   <Link
                     href="/produkty"
-                    className="block text-center mt-3 text-sm text-gray-700 hover:text-[#008abf] transition-colors"
+                    className="block text-center mt-3 text-sm text-gray-700 hover:text-[#e91e8c] transition-colors"
                   >
                     Pokračovat v nákupu
                   </Link>

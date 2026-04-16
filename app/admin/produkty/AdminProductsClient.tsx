@@ -50,7 +50,7 @@ export default function AdminProductsClient({ products: initial }: Props) {
         <Link
           href="/admin/produkty/novy"
           className="inline-flex items-center gap-2 mt-4 px-4 py-2 rounded-lg text-sm"
-          style={{ background: '#008abf', color: '#080808', fontWeight: 600 }}
+          style={{ background: '#e91e8c', color: '#080808', fontWeight: 600 }}
         >
           Přidat první produkt
         </Link>
@@ -121,7 +121,7 @@ export default function AdminProductsClient({ products: initial }: Props) {
                 </td>
 
                 {/* Cena */}
-                <td className="px-5 py-3 text-sm font-semibold" style={{ color: '#008abf' }}>
+                <td className="px-5 py-3 text-sm font-semibold" style={{ color: '#e91e8c' }}>
                   {Number(product.price).toFixed(2)} Kč
                 </td>
 
@@ -144,7 +144,7 @@ export default function AdminProductsClient({ products: initial }: Props) {
                     onClick={() => handleToggleActive(product)}
                     className="relative w-10 h-5 rounded-full transition-colors"
                     style={{
-                      background: product.active ? '#008abf' : 'rgba(255,255,255,0.15)',
+                      background: product.active ? '#e91e8c' : 'rgba(255,255,255,0.15)',
                     }}
                   >
                     <span
@@ -160,7 +160,7 @@ export default function AdminProductsClient({ products: initial }: Props) {
                     <Link
                       href={`/admin/produkty/${product.id}`}
                       className="p-1.5 rounded-lg transition-colors"
-                      style={{ color: '#008abf', background: 'rgba(0,138,191,0.1)' }}
+                      style={{ color: '#e91e8c', background: 'rgba(233,30,140,0.1)' }}
                     >
                       <Pencil size={14} />
                     </Link>

@@ -52,15 +52,15 @@ export default function CartDrawer({ open, onClose }: CartDrawerProps) {
             {/* Header */}
             <div className="flex items-center justify-between p-5 border-b border-gray-100" style={{ background: '#080808' }}>
               <div className="flex items-center gap-2">
-                <ShoppingBag size={20} color="#008abf" />
-                <span className="font-semibold text-lg" style={{ color: '#008abf', fontFamily: 'var(--font-heading)' }}>
+                <ShoppingBag size={20} color="#e91e8c" />
+                <span className="font-semibold text-lg" style={{ color: '#e91e8c', fontFamily: 'var(--font-heading)' }}>
                   Košík ({items.length})
                 </span>
               </div>
               <button
                 onClick={onClose}
                 className="p-2 rounded-full hover:bg-white/10 transition-colors"
-                style={{ color: '#008abf' }}
+                style={{ color: '#e91e8c' }}
               >
                 <X size={20} />
               </button>
@@ -97,7 +97,7 @@ export default function CartDrawer({ open, onClose }: CartDrawerProps) {
                     {/* Info */}
                     <div className="flex-1 min-w-0">
                       <p className="font-medium text-sm text-gray-900 truncate">{item.product.name}</p>
-                      <p className="text-sm font-semibold mt-1" style={{ color: '#008abf' }}>
+                      <p className="text-sm font-semibold mt-1" style={{ color: '#e91e8c' }}>
                         {(item.product.price * item.quantity).toFixed(2)} Kč
                       </p>
 
@@ -105,14 +105,14 @@ export default function CartDrawer({ open, onClose }: CartDrawerProps) {
                       <div className="flex items-center gap-2 mt-2">
                         <button
                           onClick={() => updateQuantity(item.product.id, item.quantity - 1)}
-                          className="w-6 h-6 rounded-full border-2 border-gray-400 text-gray-800 flex items-center justify-center hover:border-[#008abf] hover:text-[#008abf] transition-colors"
+                          className="w-6 h-6 rounded-full border-2 border-gray-400 text-gray-800 flex items-center justify-center hover:border-[#e91e8c] hover:text-[#e91e8c] transition-colors"
                         >
                           <Minus size={12} />
                         </button>
                         <span className="text-sm font-bold w-6 text-center text-gray-900">{item.quantity}</span>
                         <button
                           onClick={() => updateQuantity(item.product.id, item.quantity + 1)}
-                          className="w-6 h-6 rounded-full border-2 border-gray-400 text-gray-800 flex items-center justify-center hover:border-[#008abf] hover:text-[#008abf] transition-colors"
+                          className="w-6 h-6 rounded-full border-2 border-gray-400 text-gray-800 flex items-center justify-center hover:border-[#e91e8c] hover:text-[#e91e8c] transition-colors"
                         >
                           <Plus size={12} />
                         </button>
@@ -136,7 +136,7 @@ export default function CartDrawer({ open, onClose }: CartDrawerProps) {
               <div className="p-5 border-t border-gray-100 space-y-3">
                 <div className="flex justify-between text-base font-bold text-gray-900">
                   <span>Celkem:</span>
-                  <span style={{ color: '#008abf' }}>{totalPrice().toFixed(2)} Kč</span>
+                  <span style={{ color: '#e91e8c' }}>{totalPrice().toFixed(2)} Kč</span>
                 </div>
                 <Link
                   href="/kosik"

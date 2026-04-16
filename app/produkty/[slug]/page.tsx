@@ -44,7 +44,7 @@ export default async function ProduktDetailPage({ params }: Props) {
   return (
     <>
       <Navbar />
-      <main className="flex-1" style={{ background: '#faf8f4' }}>
+      <main className="flex-1" style={{ background: '#fff5f9' }}>
         <ProductDetailClient product={product} />
       </main>
       <Footer />

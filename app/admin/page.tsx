@@ -57,7 +57,7 @@ export default async function AdminDashboard() {
     await getDashboardStats();
 
   const stats = [
-    { label: 'Celkem produktů', value: totalProducts ?? 0, icon: Package, color: '#008abf' },
+    { label: 'Celkem produktů', value: totalProducts ?? 0, icon: Package, color: '#e91e8c' },
     { label: 'Aktivní produkty', value: activeProducts ?? 0, icon: TrendingUp, color: '#22c55e' },
     { label: 'Kategorie', value: totalCategories ?? 0, icon: Tag, color: '#3b82f6' },
     { label: 'Objednávky dnes', value: todayOrders ?? 0, icon: ShoppingBag, color: '#f59e0b' },
@@ -118,7 +118,7 @@ export default async function AdminDashboard() {
           <Link
             href="/admin/objednavky"
             className="text-xs font-medium"
-            style={{ color: '#008abf' }}
+            style={{ color: '#e91e8c' }}
           >
             Zobrazit vše →
           </Link>
@@ -154,7 +154,7 @@ export default async function AdminDashboard() {
                       <Link
                         href={`/admin/objednavky/${order.id}`}
                         className="text-sm font-medium hover:underline"
-                        style={{ color: '#008abf' }}
+                        style={{ color: '#e91e8c' }}
                       >
                         {order.order_number ?? '—'}
                       </Link>
@@ -162,7 +162,7 @@ export default async function AdminDashboard() {
                     <td className="px-6 py-4 text-sm" style={{ color: 'rgba(255,255,255,0.8)' }}>
                       {order.customer_name}
                     </td>
-                    <td className="px-6 py-4 text-sm font-semibold" style={{ color: '#008abf' }}>
+                    <td className="px-6 py-4 text-sm font-semibold" style={{ color: '#e91e8c' }}>
                       {Number(order.total).toFixed(2)} Kč
                     </td>
                     <td className="px-6 py-4 text-sm" style={{ color: 'rgba(255,255,255,0.6)' }}>

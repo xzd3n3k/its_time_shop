@@ -17,7 +17,7 @@ export default async function HotovePage({ searchParams }: Props) {
   return (
     <>
       <Navbar />
-      <main className="flex-1 min-h-screen flex items-center justify-center px-4" style={{ background: '#faf8f4' }}>
+      <main className="flex-1 min-h-screen flex items-center justify-center px-4" style={{ background: '#fff5f9' }}>
         <div className="max-w-lg w-full text-center">
           {/* Ikona */}
           <div
@@ -44,12 +44,12 @@ export default async function HotovePage({ searchParams }: Props) {
           {order && (
             <div
               className="flex items-center justify-center gap-3 p-4 rounded-xl mb-6"
-              style={{ background: 'rgba(0,138,191,0.1)', border: '1px solid rgba(0,138,191,0.3)' }}
+              style={{ background: 'rgba(233,30,140,0.1)', border: '1px solid rgba(233,30,140,0.3)' }}
             >
-              <Package size={20} style={{ color: '#008abf' }} />
+              <Package size={20} style={{ color: '#e91e8c' }} />
               <div className="text-left">
                 <p className="text-xs text-gray-500">Číslo objednávky</p>
-                <p className="font-bold text-lg" style={{ color: '#008abf' }}>
+                <p className="font-bold text-lg" style={{ color: '#e91e8c' }}>
                   {order}
                 </p>
               </div>
@@ -63,7 +63,7 @@ export default async function HotovePage({ searchParams }: Props) {
             <div className="flex items-start gap-3">
               <div
                 className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 text-xs font-bold"
-                style={{ background: '#008abf', color: '#080808' }}
+                style={{ background: '#e91e8c', color: '#080808' }}
               >
                 1
               </div>
@@ -75,7 +75,7 @@ export default async function HotovePage({ searchParams }: Props) {
             <div className="flex items-start gap-3">
               <div
                 className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 text-xs font-bold"
-                style={{ background: '#008abf', color: '#080808' }}
+                style={{ background: '#e91e8c', color: '#080808' }}
               >
                 2
               </div>
@@ -87,7 +87,7 @@ export default async function HotovePage({ searchParams }: Props) {
             <div className="flex items-start gap-3">
               <div
                 className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 text-xs font-bold"
-                style={{ background: '#008abf', color: '#080808' }}
+                style={{ background: '#e91e8c', color: '#080808' }}
               >
                 3
               </div>

@@ -53,15 +53,15 @@ export default async function HomePage() {
         <div
           className="absolute inset-0 opacity-5"
           style={{
-            backgroundImage: `radial-gradient(circle at 20% 50%, #008abf 0%, transparent 50%),
-              radial-gradient(circle at 80% 20%, #008abf 0%, transparent 40%)`,
+            backgroundImage: `radial-gradient(circle at 20% 50%, #e91e8c 0%, transparent 50%),
+              radial-gradient(circle at 80% 20%, #e91e8c 0%, transparent 40%)`,
           }}
         />
 
         <div className="relative z-10 text-center max-w-4xl mx-auto">
           <p
             className="text-sm uppercase tracking-[0.3em] mb-6"
-            style={{ color: '#008abf' }}
+            style={{ color: '#e91e8c' }}
           >
             Prémiová autokosmetika
           </p>
@@ -75,7 +75,7 @@ export default async function HomePage() {
           >
             Prémiová péče
             <br />
-            <span style={{ color: '#008abf' }}>o váš automobil</span>
+            <span style={{ color: '#e91e8c' }}>o váš automobil</span>
           </h1>
 
           <div className="gold-line mx-auto mb-6" />
@@ -96,12 +96,12 @@ export default async function HomePage() {
 
       {/* Doporučené produkty */}
       {featuredProducts.length > 0 && (
-        <section className="py-20 px-4" style={{ background: '#faf8f4' }}>
+        <section className="py-20 px-4" style={{ background: '#fff5f9' }}>
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <p
                 className="text-sm uppercase tracking-[0.25em] mb-3"
-                style={{ color: '#008abf' }}
+                style={{ color: '#e91e8c' }}
               >
                 Výběr pro vás
               </p>
@@ -135,7 +135,7 @@ export default async function HomePage() {
           <div className="text-center mb-12">
             <p
               className="text-sm uppercase tracking-[0.25em] mb-3"
-              style={{ color: '#008abf' }}
+              style={{ color: '#e91e8c' }}
             >
               Naše hodnoty
             </p>
@@ -156,11 +156,11 @@ export default async function HomePage() {
                   <div
                     className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-5"
                     style={{
-                      background: 'rgba(0,138,191,0.15)',
-                      border: '1px solid rgba(0,138,191,0.3)',
+                      background: 'rgba(233,30,140,0.15)',
+                      border: '1px solid rgba(233,30,140,0.3)',
                     }}
                   >
-                    <Icon size={24} style={{ color: '#008abf' }} />
+                    <Icon size={24} style={{ color: '#e91e8c' }} />
                   </div>
                   <h3
                     className="text-xl font-semibold mb-3"

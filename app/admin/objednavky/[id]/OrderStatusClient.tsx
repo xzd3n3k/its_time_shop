@@ -51,7 +51,7 @@ export default function OrderStatusClient({ orderId, currentStatus }: Props) {
 
   return (
     <div className="flex items-center gap-3">
-      {loading && <Loader2 size={16} className="animate-spin" style={{ color: '#008abf' }} />}
+      {loading && <Loader2 size={16} className="animate-spin" style={{ color: '#e91e8c' }} />}
       <div className="relative">
         <select
           value={status}

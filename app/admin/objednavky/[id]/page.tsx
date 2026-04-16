@@ -77,7 +77,7 @@ export default async function ObjednavkaDetailPage({ params }: Props) {
           style={{ background: '#1a1a1a', border: '1px solid rgba(255,255,255,0.06)' }}
         >
           <div className="flex items-center gap-2 mb-4">
-            <User size={16} style={{ color: '#008abf' }} />
+            <User size={16} style={{ color: '#e91e8c' }} />
             <h2 className="font-semibold text-sm" style={{ color: '#ffffff' }}>
               Zákazník
             </h2>
@@ -97,7 +97,7 @@ export default async function ObjednavkaDetailPage({ params }: Props) {
           style={{ background: '#1a1a1a', border: '1px solid rgba(255,255,255,0.06)' }}
         >
           <div className="flex items-center gap-2 mb-4">
-            <MapPin size={16} style={{ color: '#008abf' }} />
+            <MapPin size={16} style={{ color: '#e91e8c' }} />
             <h2 className="font-semibold text-sm" style={{ color: '#ffffff' }}>
               Doručovací adresa
             </h2>
@@ -115,7 +115,7 @@ export default async function ObjednavkaDetailPage({ params }: Props) {
           style={{ background: '#1a1a1a', border: '1px solid rgba(255,255,255,0.06)' }}
         >
           <div className="flex items-center gap-2 mb-4">
-            <CreditCard size={16} style={{ color: '#008abf' }} />
+            <CreditCard size={16} style={{ color: '#e91e8c' }} />
             <h2 className="font-semibold text-sm" style={{ color: '#ffffff' }}>
               Platba
             </h2>
@@ -144,7 +144,7 @@ export default async function ObjednavkaDetailPage({ params }: Props) {
           style={{ background: '#1a1a1a', border: '1px solid rgba(255,255,255,0.06)' }}
         >
           <div className="flex items-center gap-2 mb-4">
-            <Package size={16} style={{ color: '#008abf' }} />
+            <Package size={16} style={{ color: '#e91e8c' }} />
             <h2 className="font-semibold text-sm" style={{ color: '#ffffff' }}>
               Položky objednávky
             </h2>
@@ -165,7 +165,7 @@ export default async function ObjednavkaDetailPage({ params }: Props) {
                     {Number(item.product?.price ?? 0).toFixed(2)} Kč × {item.quantity} ks
                   </p>
                 </div>
-                <p className="text-sm font-semibold" style={{ color: '#008abf' }}>
+                <p className="text-sm font-semibold" style={{ color: '#e91e8c' }}>
                   {(Number(item.product?.price ?? 0) * item.quantity).toFixed(2)} Kč
                 </p>
               </div>
@@ -179,7 +179,7 @@ export default async function ObjednavkaDetailPage({ params }: Props) {
             <span className="font-semibold" style={{ color: '#ffffff' }}>
               Celkem:
             </span>
-            <span className="text-xl font-bold" style={{ color: '#008abf' }}>
+            <span className="text-xl font-bold" style={{ color: '#e91e8c' }}>
               {Number(order.total).toFixed(2)} Kč
             </span>
           </div>

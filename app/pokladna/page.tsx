@@ -70,7 +70,7 @@ export default function PokladnaPage() {
     return (
       <>
         <Navbar />
-        <main className="flex-1 min-h-screen flex items-center justify-center" style={{ background: '#faf8f4' }}>
+        <main className="flex-1 min-h-screen flex items-center justify-center" style={{ background: '#fff5f9' }}>
           <div className="text-center">
             <p className="text-gray-700 mb-4">Váš košík je prázdný</p>
             <Link href="/produkty" className="btn-gold rounded-lg">
@@ -86,10 +86,10 @@ export default function PokladnaPage() {
   return (
     <>
       <Navbar />
-      <main className="flex-1 min-h-screen" style={{ background: '#faf8f4' }}>
+      <main className="flex-1 min-h-screen" style={{ background: '#fff5f9' }}>
         {/* Hlavička */}
         <div className="py-12 px-4 text-center" style={{ background: '#080808' }}>
-          <p className="text-sm uppercase tracking-[0.25em] mb-3" style={{ color: '#008abf' }}>
+          <p className="text-sm uppercase tracking-[0.25em] mb-3" style={{ color: '#e91e8c' }}>
             Dokončení nákupu
           </p>
           <h1
@@ -120,7 +120,7 @@ export default function PokladnaPage() {
                         required
                         value={form.customer_name}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-[#008abf] focus:ring-2 focus:ring-blue-50 text-sm"
+                        className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-[#e91e8c] focus:ring-2 focus:ring-blue-50 text-sm"
                         placeholder="Jan Novák"
                       />
                     </div>
@@ -134,7 +134,7 @@ export default function PokladnaPage() {
                         required
                         value={form.customer_email}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-[#008abf] focus:ring-2 focus:ring-blue-50 text-sm"
+                        className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-[#e91e8c] focus:ring-2 focus:ring-blue-50 text-sm"
                         placeholder="jan@example.com"
                       />
                     </div>
@@ -147,7 +147,7 @@ export default function PokladnaPage() {
                         name="customer_phone"
                         value={form.customer_phone}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-[#008abf] focus:ring-2 focus:ring-blue-50 text-sm"
+                        className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-[#e91e8c] focus:ring-2 focus:ring-blue-50 text-sm"
                         placeholder="+420 777 000 000"
                       />
                     </div>
@@ -168,7 +168,7 @@ export default function PokladnaPage() {
                         required
                         value={form.customer_street}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-[#008abf] focus:ring-2 focus:ring-blue-50 text-sm"
+                        className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-[#e91e8c] focus:ring-2 focus:ring-blue-50 text-sm"
                         placeholder="Hlavní 123"
                       />
                     </div>
@@ -183,7 +183,7 @@ export default function PokladnaPage() {
                           required
                           value={form.customer_city}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-[#008abf] focus:ring-2 focus:ring-blue-50 text-sm"
+                          className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-[#e91e8c] focus:ring-2 focus:ring-blue-50 text-sm"
                           placeholder="Praha"
                         />
                       </div>
@@ -197,7 +197,7 @@ export default function PokladnaPage() {
                           required
                           value={form.customer_zip}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-[#008abf] focus:ring-2 focus:ring-blue-50 text-sm"
+                          className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-[#e91e8c] focus:ring-2 focus:ring-blue-50 text-sm"
                           placeholder="110 00"
                         />
                       </div>
@@ -211,7 +211,7 @@ export default function PokladnaPage() {
                         value={form.notes}
                         onChange={handleChange}
                         rows={3}
-                        className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-[#008abf] focus:ring-2 focus:ring-blue-50 text-sm resize-none"
+                        className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-[#e91e8c] focus:ring-2 focus:ring-blue-50 text-sm resize-none"
                         placeholder="Případné poznámky k doručení..."
                       />
                     </div>
@@ -226,8 +226,8 @@ export default function PokladnaPage() {
                     <label
                       className="flex items-center gap-4 p-4 rounded-lg border-2 cursor-pointer transition-all"
                       style={{
-                        borderColor: payment === 'cash' ? '#008abf' : '#e5e7eb',
-                        background: payment === 'cash' ? 'rgba(0,138,191,0.05)' : '#ffffff',
+                        borderColor: payment === 'cash' ? '#e91e8c' : '#e5e7eb',
+                        background: payment === 'cash' ? 'rgba(233,30,140,0.05)' : '#ffffff',
                       }}
                     >
                       <input
@@ -238,7 +238,7 @@ export default function PokladnaPage() {
                         onChange={() => setPayment('cash')}
                         className="sr-only"
                       />
-                      <Banknote size={22} style={{ color: payment === 'cash' ? '#008abf' : '#9ca3af' }} />
+                      <Banknote size={22} style={{ color: payment === 'cash' ? '#e91e8c' : '#6b7280' }} />
                       <div>
                         <p className="font-medium text-gray-900">Hotově</p>
                         <p className="text-xs text-gray-600">Platba při převzetí</p>
@@ -246,7 +246,7 @@ export default function PokladnaPage() {
                       {payment === 'cash' && (
                         <div
                           className="ml-auto w-5 h-5 rounded-full flex items-center justify-center"
-                          style={{ background: '#008abf' }}
+                          style={{ background: '#e91e8c' }}
                         >
                           <div className="w-2 h-2 rounded-full bg-white" />
                         </div>
@@ -257,8 +257,8 @@ export default function PokladnaPage() {
                     <label
                       className="flex items-center gap-4 p-4 rounded-lg border-2 cursor-pointer transition-all"
                       style={{
-                        borderColor: payment === 'bank_transfer' ? '#008abf' : '#e5e7eb',
-                        background: payment === 'bank_transfer' ? 'rgba(0,138,191,0.05)' : '#ffffff',
+                        borderColor: payment === 'bank_transfer' ? '#e91e8c' : '#e5e7eb',
+                        background: payment === 'bank_transfer' ? 'rgba(233,30,140,0.05)' : '#ffffff',
                       }}
                     >
                       <input
@@ -269,7 +269,7 @@ export default function PokladnaPage() {
                         onChange={() => setPayment('bank_transfer')}
                         className="sr-only"
                       />
-                      <Wallet size={22} style={{ color: payment === 'bank_transfer' ? '#008abf' : '#9ca3af' }} />
+                      <Wallet size={22} style={{ color: payment === 'bank_transfer' ? '#e91e8c' : '#6b7280' }} />
                       <div>
                         <p className="font-medium text-gray-900">Bankovní převod</p>
                         <p className="text-xs text-gray-600">Platba převodem na účet</p>
@@ -277,7 +277,7 @@ export default function PokladnaPage() {
                       {payment === 'bank_transfer' && (
                         <div
                           className="ml-auto w-5 h-5 rounded-full flex items-center justify-center"
-                          style={{ background: '#008abf' }}
+                          style={{ background: '#e91e8c' }}
                         >
                           <div className="w-2 h-2 rounded-full bg-white" />
                         </div>
@@ -326,7 +326,7 @@ export default function PokladnaPage() {
                     </div>
                     <div className="flex justify-between items-center">
                       <span className="font-semibold text-gray-900">Celkem:</span>
-                      <span className="text-2xl font-bold" style={{ color: '#008abf' }}>
+                      <span className="text-2xl font-bold" style={{ color: '#e91e8c' }}>
                         {totalPrice().toFixed(2)} Kč
                       </span>
                     </div>

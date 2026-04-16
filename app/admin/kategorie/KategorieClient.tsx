@@ -167,7 +167,7 @@ export default function KategorieClient({ initialCategories }: Props) {
                       <button
                         onClick={() => startEdit(cat)}
                         className="p-1.5 rounded-lg"
-                        style={{ background: 'rgba(0,138,191,0.1)', color: '#008abf' }}
+                        style={{ background: 'rgba(233,30,140,0.1)', color: '#e91e8c' }}
                       >
                         <Pencil size={14} />
                       </button>
@@ -230,7 +230,7 @@ export default function KategorieClient({ initialCategories }: Props) {
             onClick={handleAdd}
             disabled={loading || !newName.trim()}
             className="w-full flex items-center justify-center gap-2 py-3 rounded-lg text-sm font-semibold transition-all disabled:opacity-50"
-            style={{ background: 'linear-gradient(135deg, #008abf, #432273)', color: '#080808' }}
+            style={{ background: 'linear-gradient(135deg, #e91e8c, #8b0048)', color: '#080808' }}
           >
             {loading ? (
               <Loader2 size={16} className="animate-spin" />

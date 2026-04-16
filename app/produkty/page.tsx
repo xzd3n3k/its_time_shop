@@ -34,7 +34,7 @@ export default async function ProduktyPage() {
   return (
     <>
       <Navbar />
-      <main className="flex-1 min-h-screen" style={{ background: '#faf8f4' }}>
+      <main className="flex-1 min-h-screen" style={{ background: '#fff5f9' }}>
         {/* Hlavička */}
         <div
           className="py-16 px-4 text-center"
@@ -42,7 +42,7 @@ export default async function ProduktyPage() {
         >
           <p
             className="text-sm uppercase tracking-[0.25em] mb-3"
-            style={{ color: '#008abf' }}
+            style={{ color: '#e91e8c' }}
           >
             Náš sortiment
           </p>

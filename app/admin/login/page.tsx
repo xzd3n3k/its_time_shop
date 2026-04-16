@@ -48,7 +48,7 @@ export default function AdminLoginPage() {
         <div className="text-center mb-10">
           <h1
             className="text-4xl font-bold tracking-widest mb-2"
-            style={{ fontFamily: 'var(--font-heading)', color: '#008abf' }}
+            style={{ fontFamily: 'var(--font-heading)', color: '#e91e8c' }}
           >
             It&apos;s Time
           </h1>
@@ -63,14 +63,14 @@ export default function AdminLoginPage() {
           className="rounded-2xl p-8"
           style={{
             background: '#0e0e0e',
-            border: '1px solid rgba(0,138,191,0.2)',
+            border: '1px solid rgba(233,30,140,0.2)',
           }}
         >
           <div
             className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-6"
-            style={{ background: 'rgba(0,138,191,0.1)', border: '1px solid rgba(0,138,191,0.3)' }}
+            style={{ background: 'rgba(233,30,140,0.1)', border: '1px solid rgba(233,30,140,0.3)' }}
           >
-            <Lock size={20} style={{ color: '#008abf' }} />
+            <Lock size={20} style={{ color: '#e91e8c' }} />
           </div>
 
           <h2
@@ -98,7 +98,7 @@ export default function AdminLoginPage() {
                   className="w-full px-4 py-3 pr-10 rounded-lg text-sm"
                   style={{
                     background: '#1a1a1a',
-                    border: '1px solid rgba(0,138,191,0.2)',
+                    border: '1px solid rgba(233,30,140,0.2)',
                     color: '#ffffff',
                   }}
                   placeholder="••••••••"
@@ -123,7 +123,7 @@ export default function AdminLoginPage() {
               disabled={loading}
               className="w-full py-3 rounded-lg font-semibold flex items-center justify-center gap-2 transition-all"
               style={{
-                background: 'linear-gradient(135deg, #008abf, #432273)',
+                background: 'linear-gradient(135deg, #e91e8c, #8b0048)',
                 color: '#080808',
               }}
             >
