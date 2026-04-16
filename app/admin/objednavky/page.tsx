@@ -1,6 +1,7 @@
 import { supabaseAdmin } from '@/lib/supabase';
 import { Order } from '@/lib/types';
 import Link from 'next/link';
+import DeleteOrderButton from '@/components/admin/DeleteOrderButton';
 
 const statusLabels: Record<string, string> = {
   pending: 'Čeká',
@@ -97,7 +98,7 @@ export default async function AdminObjednavkyPage({ searchParams }: Props) {
             <table className="w-full">
               <thead>
                 <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
-                  {['Číslo', 'Zákazník', 'Celkem', 'Platba', 'Status', 'Datum', 'Detail'].map((h) => (
+                  {['Číslo', 'Zákazník', 'Celkem', 'Platba', 'Status', 'Datum', 'Detail', ''].map((h) => (
                     <th
                       key={h}
                       className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider"
@@ -160,6 +161,9 @@ export default async function AdminObjednavkyPage({ searchParams }: Props) {
                       >
                         Detail
                       </Link>
+                    </td>
+                    <td className="px-4 py-4">
+                      <DeleteOrderButton orderId={order.id} orderNumber={order.order_number ?? undefined} />
                     </td>
                   </tr>
                 ))}
