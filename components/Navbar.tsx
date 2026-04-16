@@ -50,6 +50,13 @@ export default function Navbar() {
                 >
                   Produkty
                 </Link>
+                <Link
+                  href="/kontakty"
+                  className="text-sm font-medium px-3 py-2 rounded-lg transition-colors hover:bg-white/10 hover:text-[#e91e8c]"
+                  style={{ color: 'rgba(255,255,255,0.75)' }}
+                >
+                  Kontakty
+                </Link>
               </div>
 
               {/* Košík */}
@@ -112,6 +119,14 @@ export default function Navbar() {
                   style={{ color: 'rgba(255,255,255,0.8)' }}
                 >
                   Produkty
+                </Link>
+                <Link
+                  href="/kontakty"
+                  onClick={() => setMobileOpen(false)}
+                  className="flex items-center text-sm font-medium px-3 py-3 rounded-lg transition-colors hover:bg-white/10 hover:text-[#e91e8c]"
+                  style={{ color: 'rgba(255,255,255,0.8)' }}
+                >
+                  Kontakty
                 </Link>
               </div>
             </div>

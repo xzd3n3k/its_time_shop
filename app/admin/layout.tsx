@@ -1,7 +1,7 @@
 import { cookies, headers } from 'next/headers';
 import { redirect } from 'next/navigation';
 import Link from 'next/link';
-import { LayoutDashboard, Package, Tag, ShoppingBag, LogOut } from 'lucide-react';
+import { LayoutDashboard, Package, Tag, ShoppingBag, LogOut, Settings } from 'lucide-react';
 
 export const metadata = {
   title: "Admin | It's Time",
@@ -18,6 +18,7 @@ const navItems: NavItem[] = [
   { href: '/admin/produkty', label: 'Produkty', icon: Package },
   { href: '/admin/kategorie', label: 'Kategorie', icon: Tag },
   { href: '/admin/objednavky', label: 'Objednávky', icon: ShoppingBag },
+  { href: '/admin/nastaveni', label: 'Nastavení', icon: Settings },
 ];
 
 export default async function AdminLayout({ children }: { children: React.ReactNode }) {

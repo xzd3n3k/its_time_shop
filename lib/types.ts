@@ -26,6 +26,15 @@ export type CartItem = {
   quantity: number;
 };
 
+export type ShopSettings = {
+  id: number;
+  company_name: string;
+  email: string;
+  address: string;
+  phone: string;
+  bank_account: string;
+};
+
 export type Order = {
   id: string;
   order_number: string | null;
