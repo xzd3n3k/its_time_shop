@@ -22,7 +22,7 @@ export default function Navbar() {
             {/* Logo */}
             <Link
               href="/"
-              className="text-2xl font-bold tracking-wide"
+              className="text-2xl font-bold tracking-wide flex-shrink-0"
               style={{
                 fontFamily: 'var(--font-heading)',
                 color: '#e91e8c',
@@ -32,26 +32,26 @@ export default function Navbar() {
               It&apos;s Time
             </Link>
 
-            {/* Desktop navigace */}
-            <div className="hidden md:flex items-center gap-8">
-              <Link
-                href="/"
-                className="text-sm font-medium transition-colors hover:text-yellow-400"
-                style={{ color: 'rgba(255,255,255,0.8)' }}
-              >
-                Domů
-              </Link>
-              <Link
-                href="/produkty"
-                className="text-sm font-medium transition-colors hover:text-yellow-400"
-                style={{ color: 'rgba(255,255,255,0.8)' }}
-              >
-                Produkty
-              </Link>
-            </div>
+            {/* Pravá část – desktop nav + košík */}
+            <div className="flex items-center gap-2">
+              {/* Desktop navigace – těsně vlevo od košíku */}
+              <div className="hidden md:flex items-center gap-1 mr-4">
+                <Link
+                  href="/"
+                  className="text-sm font-medium px-3 py-2 rounded-lg transition-colors hover:bg-white/10 hover:text-[#e91e8c]"
+                  style={{ color: 'rgba(255,255,255,0.75)' }}
+                >
+                  Domů
+                </Link>
+                <Link
+                  href="/produkty"
+                  className="text-sm font-medium px-3 py-2 rounded-lg transition-colors hover:bg-white/10 hover:text-[#e91e8c]"
+                  style={{ color: 'rgba(255,255,255,0.75)' }}
+                >
+                  Produkty
+                </Link>
+              </div>
 
-            {/* Pravá část */}
-            <div className="flex items-center gap-3">
               {/* Košík */}
               <button
                 onClick={() => setDrawerOpen(true)}
@@ -83,31 +83,39 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Mobile menu */}
+        {/* Mobile menu – absolutní overlay, nepřesouvá obsah */}
         {mobileOpen && (
-          <div
-            className="md:hidden border-t"
-            style={{ background: '#0e0e0e', borderColor: 'rgba(233,30,140,0.2)' }}
-          >
-            <div className="px-4 py-4 space-y-3">
-              <Link
-                href="/"
-                onClick={() => setMobileOpen(false)}
-                className="block text-sm font-medium py-2 transition-colors hover:text-yellow-400"
-                style={{ color: 'rgba(255,255,255,0.8)' }}
-              >
-                Domů
-              </Link>
-              <Link
-                href="/produkty"
-                onClick={() => setMobileOpen(false)}
-                className="block text-sm font-medium py-2 transition-colors hover:text-yellow-400"
-                style={{ color: 'rgba(255,255,255,0.8)' }}
-              >
-                Produkty
-              </Link>
+          <>
+            {/* Backdrop */}
+            <div
+              className="md:hidden fixed inset-0 top-16 z-40 bg-black/50"
+              onClick={() => setMobileOpen(false)}
+            />
+            {/* Menu panel */}
+            <div
+              className="md:hidden absolute left-0 right-0 z-50 border-t shadow-xl"
+              style={{ background: '#111111', borderColor: 'rgba(233,30,140,0.25)' }}
+            >
+              <div className="px-4 py-3 space-y-1">
+                <Link
+                  href="/"
+                  onClick={() => setMobileOpen(false)}
+                  className="flex items-center text-sm font-medium px-3 py-3 rounded-lg transition-colors hover:bg-white/10 hover:text-[#e91e8c]"
+                  style={{ color: 'rgba(255,255,255,0.8)' }}
+                >
+                  Domů
+                </Link>
+                <Link
+                  href="/produkty"
+                  onClick={() => setMobileOpen(false)}
+                  className="flex items-center text-sm font-medium px-3 py-3 rounded-lg transition-colors hover:bg-white/10 hover:text-[#e91e8c]"
+                  style={{ color: 'rgba(255,255,255,0.8)' }}
+                >
+                  Produkty
+                </Link>
+              </div>
             </div>
-          </div>
+          </>
         )}
       </nav>
 
