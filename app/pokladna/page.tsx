@@ -58,7 +58,9 @@ export default function PokladnaPage() {
       }
 
       clear();
-      router.push(`/pokladna/hotovo?order=${data.orderNumber}`);
+      const totalAmount = totalPrice().toFixed(2);
+      const params = new URLSearchParams({ order: data.orderNumber, payment, total: totalAmount });
+      router.push(`/pokladna/hotovo?${params.toString()}`);
     } catch {
       setError('Chyba připojení. Zkuste to prosím znovu.');
     } finally {
