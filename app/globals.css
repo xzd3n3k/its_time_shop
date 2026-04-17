@@ -29,6 +29,13 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* Černý text v inputech (body má světlý text kvůli dark theme) */
+input,
+textarea,
+select {
+  color: #111827;
+}
+
 /* Tmavší placeholdery ve formulářích */
 input::placeholder,
 textarea::placeholder {
