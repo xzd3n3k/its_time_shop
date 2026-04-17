@@ -14,6 +14,7 @@ export default function PokladnaPage() {
   const router = useRouter();
   const { items, totalPrice, clear } = useCartStore();
   const [loading, setLoading] = useState(false);
+  const [redirecting, setRedirecting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [payment, setPayment] = useState<PaymentMethod>('cash');
 
@@ -57,16 +58,32 @@ export default function PokladnaPage() {
         return;
       }
 
-      clear();
       const totalAmount = totalPrice().toFixed(2);
       const params = new URLSearchParams({ order: data.orderNumber, payment, total: totalAmount });
+      setRedirecting(true);
       router.push(`/pokladna/hotovo?${params.toString()}`);
+      clear();
     } catch {
       setError('Chyba připojení. Zkuste to prosím znovu.');
     } finally {
       setLoading(false);
     }
   };
+
+  if (redirecting) {
+    return (
+      <>
+        <Navbar />
+        <main className="flex-1 min-h-screen flex items-center justify-center" style={{ background: '#fff5f9' }}>
+          <div className="flex items-center gap-3 text-gray-600">
+            <Loader2 size={22} className="animate-spin" style={{ color: '#e91e8c' }} />
+            <p>Zpracovávám objednávku...</p>
+          </div>
+        </main>
+        <Footer />
+      </>
+    );
+  }
 
   if (items.length === 0) {
     return (
