@@ -57,6 +57,13 @@ export default function Navbar() {
                 >
                   Kontakty
                 </Link>
+                <Link
+                  href="/sledovani-objednavky"
+                  className="text-sm font-medium px-3 py-2 rounded-lg transition-colors hover:bg-white/10 hover:text-[#e91e8c]"
+                  style={{ color: 'rgba(255,255,255,0.75)' }}
+                >
+                  Sledování objednávky
+                </Link>
               </div>
 
               {/* Košík */}
@@ -127,6 +134,14 @@ export default function Navbar() {
                   style={{ color: 'rgba(255,255,255,0.8)' }}
                 >
                   Kontakty
+                </Link>
+                <Link
+                  href="/sledovani-objednavky"
+                  onClick={() => setMobileOpen(false)}
+                  className="flex items-center text-sm font-medium px-3 py-3 rounded-lg transition-colors hover:bg-white/10 hover:text-[#e91e8c]"
+                  style={{ color: 'rgba(255,255,255,0.8)' }}
+                >
+                  Sledování objednávky
                 </Link>
               </div>
             </div>
