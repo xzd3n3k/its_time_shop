@@ -148,7 +148,15 @@ export default async function HotovePage({ searchParams }: Props) {
                   <div className="flex justify-between items-start gap-4">
                     <span className="text-gray-500 flex-shrink-0">Číslo účtu</span>
                     <span className="font-semibold text-gray-900 text-right">
-                      {iban ? formatIBAN(iban) : settings.bank_account}
+                      {settings.bank_account}
+                    </span>
+                  </div>
+                )}
+                {iban && (
+                  <div className="flex justify-between items-start gap-4">
+                    <span className="text-gray-500 flex-shrink-0">IBAN</span>
+                    <span className="font-semibold text-gray-900 text-right font-mono text-xs leading-relaxed">
+                      {formatIBAN(iban)}
                     </span>
                   </div>
                 )}

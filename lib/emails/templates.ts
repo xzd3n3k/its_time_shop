@@ -51,6 +51,10 @@ export function customerEmailHtml(order: {
   total: number;
   items: CartItem[];
   notes?: string | null;
+  bank_account?: string | null;
+  iban?: string | null;
+  vs?: string | null;
+  payment_qr?: string | null;
 }): string {
   return `<!DOCTYPE html>
 <html lang="cs">
@@ -112,12 +116,31 @@ export function customerEmailHtml(order: {
 
             ${order.payment_method === 'bank_transfer' ? `
             <div style="margin-top:24px;padding:18px;background:#f0f9ff;border-radius:8px;border-left:4px solid ${BRAND_COLOR};">
-              <p style="margin:0 0 8px;font-size:14px;font-weight:600;color:#111827;">Platební údaje pro převod:</p>
-              <p style="margin:0;font-size:13px;color:#374151;line-height:1.7;">
-                Částka: <strong>${order.total.toLocaleString('cs-CZ')} Kč</strong><br>
-                Variabilní symbol: <strong>${order.order_number}</strong><br>
-                Bankovní spojení vám zašleme e-mailem po potvrzení objednávky.
-              </p>
+              <p style="margin:0 0 12px;font-size:14px;font-weight:600;color:#111827;">Platební údaje pro převod:</p>
+              <table width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td style="padding:3px 0;font-size:13px;color:#6b7280;width:140px;">Částka:</td>
+                  <td style="padding:3px 0;font-size:13px;color:#111827;font-weight:600;">${order.total.toLocaleString('cs-CZ')} Kč</td>
+                </tr>
+                <tr>
+                  <td style="padding:3px 0;font-size:13px;color:#6b7280;">Variabilní symbol:</td>
+                  <td style="padding:3px 0;font-size:13px;color:#111827;font-weight:600;">${order.vs || order.order_number}</td>
+                </tr>
+                ${order.bank_account ? `<tr>
+                  <td style="padding:3px 0;font-size:13px;color:#6b7280;">Číslo účtu:</td>
+                  <td style="padding:3px 0;font-size:13px;color:#111827;font-weight:600;">${order.bank_account}</td>
+                </tr>` : ''}
+                ${order.iban ? `<tr>
+                  <td style="padding:3px 0;font-size:13px;color:#6b7280;">IBAN:</td>
+                  <td style="padding:3px 0;font-size:13px;color:#111827;font-weight:600;font-family:monospace;">${order.iban}</td>
+                </tr>` : ''}
+              </table>
+              ${order.payment_qr ? `
+              <div style="margin-top:16px;text-align:center;">
+                <p style="margin:0 0 8px;font-size:12px;color:#6b7280;">Naskenujte QR kódem v bankovní aplikaci</p>
+                <img src="${order.payment_qr}" alt="QR kód pro platbu" width="160" height="160" style="border:1px solid #e5e7eb;padding:6px;background:#fff;border-radius:8px;display:block;margin:0 auto;" />
+                <p style="margin:8px 0 0;font-size:11px;color:#9ca3af;">Formát SPD – bankovní převod CZK</p>
+              </div>` : ''}
             </div>` : ''}
 
             <p style="margin:28px 0 0;font-size:13px;color:#9ca3af;text-align:center;">V případě dotazů nás kontaktujte na <a href="mailto:xhypextream@gmail.com" style="color:${BRAND_COLOR};">xhypextream@gmail.com</a></p>

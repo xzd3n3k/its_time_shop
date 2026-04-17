@@ -1,7 +1,28 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
-import { supabaseAdmin } from '@/lib/supabase';
+import QRCode from 'qrcode';
+import { supabase, supabaseAdmin } from '@/lib/supabase';
 import { customerEmailHtml, adminEmailHtml } from '@/lib/emails/templates';
+
+function czechAccountToIBAN(account: string): string | null {
+  const match = account.trim().replace(/\s/g, '').match(/^(?:(\d+)-)?(\d+)\/(\d{4})$/);
+  if (!match) return null;
+  const prefix = (match[1] ?? '0').padStart(6, '0');
+  const number = match[2].padStart(10, '0');
+  const bankCode = match[3];
+  const bban = `${bankCode}${prefix}${number}`;
+  const mod = BigInt(`${bban}123500`) % BigInt(97);
+  const checkDigits = String(BigInt(98) - mod).padStart(2, '0');
+  return `CZ${checkDigits}${bban}`;
+}
+
+function formatIBAN(iban: string): string {
+  return iban.replace(/(.{4})/g, '$1 ').trim();
+}
+
+function orderToVS(orderNumber: string): string {
+  return orderNumber.replace(/\D/g, '').slice(-10);
+}
 
 const FROM = "It's Time <onboarding@resend.dev>";
 const ADMIN_EMAIL = process.env.ORDER_EMAIL ?? 'xhypextream@gmail.com';
@@ -61,6 +82,43 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ success: false, error: 'Chyba při ukládání objednávky' }, { status: 500 });
     }
 
+    let bank_account: string | null = null;
+    let iban: string | null = null;
+    let vs: string | null = null;
+    let payment_qr: string | null = null;
+
+    if (payment_method === 'bank_transfer') {
+      const { data: settings } = await supabase.from('settings').select('bank_account').eq('id', 1).single();
+      bank_account = settings?.bank_account ?? null;
+      if (bank_account) {
+        const raw = bank_account.trim();
+        iban = raw.toUpperCase().startsWith('CZ')
+          ? raw.replace(/\s/g, '')
+          : czechAccountToIBAN(raw);
+      }
+      vs = orderToVS(order_number);
+      if (iban && total > 0) {
+        try {
+          const spd = [
+            'SPD*1.0',
+            `ACC:${iban}`,
+            `AM:${total.toFixed(2)}`,
+            'CC:CZK',
+            `X-VS:${vs}`,
+            `MSG:Objednavka ${order_number}`.slice(0, 67),
+          ].join('*');
+          payment_qr = await QRCode.toDataURL(spd, {
+            errorCorrectionLevel: 'M',
+            margin: 1,
+            width: 200,
+            color: { dark: '#1a1a1a', light: '#ffffff' },
+          });
+        } catch {
+          payment_qr = null;
+        }
+      }
+    }
+
     const orderData = {
       order_number,
       customer_name,
@@ -73,6 +131,10 @@ export async function POST(request: NextRequest) {
       total,
       items,
       notes,
+      bank_account,
+      iban: iban ? formatIBAN(iban) : null,
+      vs,
+      payment_qr,
     };
 
     // Odeslat emaily paralelně
