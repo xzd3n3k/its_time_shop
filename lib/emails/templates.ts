@@ -89,10 +89,6 @@ export function customerEmailHtml(order: {
             ${itemsTable(order.items)}
 
             <!-- Total -->
-            <div style="margin-top:16px;padding:14px 0;border-top:2px solid #111827;display:flex;justify-content:space-between;">
-              <span style="font-size:15px;font-weight:700;color:#111827;">Celkem k úhradě</span>
-              <span style="font-size:18px;font-weight:700;color:${BRAND_COLOR};">${order.total.toLocaleString('cs-CZ')} Kč</span>
-            </div>
             <table width="100%" cellpadding="0" cellspacing="0" style="margin-top:4px;">
               <tr>
                 <td style="font-size:14px;font-weight:600;color:#111827;">Celkem k úhradě</td>
