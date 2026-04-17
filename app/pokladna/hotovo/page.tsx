@@ -83,17 +83,12 @@ export default async function HotovePage({ searchParams }: Props) {
         iban = czechAccountToIBAN(settings.bank_account);
       }
     }
-    console.log('[hotovo] QR inputs:', { hasSettings: !!settings, bank_account: settings?.bank_account, iban, totalAmount, order });
     if (iban && totalAmount > 0 && order) {
       try {
         qrDataUrl = await generateSPDQR(iban, totalAmount, vs, `Objednavka ${order}`);
-        console.log('[hotovo] QR generated, length:', qrDataUrl?.length);
-      } catch (err) {
-        console.error('[hotovo] QR generation failed:', err);
+      } catch {
         qrDataUrl = null;
       }
-    } else {
-      console.warn('[hotovo] QR skipped — missing iban/total/order');
     }
   }
 
